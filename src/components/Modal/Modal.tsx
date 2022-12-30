@@ -1,5 +1,5 @@
-import React, { Children } from 'react';
-import Backdrop from '../Backdrop/Backdrop';
+import React from 'react';
+import Backdrop from '../Backdrop/Backdrop'
 
 interface Props extends React.PropsWithChildren {
     show: boolean;
@@ -8,12 +8,10 @@ interface Props extends React.PropsWithChildren {
 }
 
 const Modal: React.FC<Props> = ({show, title, onClose , children}) => {
-
     return (
         <>
             <Backdrop show={show}/>
              <div className="modal show" style={{display: show ? 'block' : 'none'}} onClick={onClose}>
-
                 <div className="modal-dialog" onClick={(e) => e.stopPropagation()}>
                     <div className="modal-content">
                         <div className="modal-header">
